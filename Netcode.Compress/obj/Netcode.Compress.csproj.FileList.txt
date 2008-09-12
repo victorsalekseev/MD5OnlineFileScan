@@ -1,0 +1,10 @@
+obj\Release\ResolveAssemblyReference.cache
+bin\Release\Netcode.Classes.Compress.dll
+bin\Release\Netcode.Classes.Compress.pdb
+obj\Release\Netcode.Classes.Compress.dll
+obj\Release\Netcode.Classes.Compress.pdb
+bin\Debug\Netcode.Classes.Compress.dll
+bin\Debug\Netcode.Classes.Compress.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Netcode.Classes.Compress.dll
+obj\Debug\Netcode.Classes.Compress.pdb

@@ -1,0 +1,12 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\FileTyper.Form1.resources
+obj\Debug\FileTyper.Properties.Resources.resources
+obj\Debug\FileTyper.csproj.GenerateResource.Cache
+bin\Debug\FileTyper.exe
+bin\Debug\FileTyper.pdb
+obj\Debug\FileTyper.exe
+obj\Debug\FileTyper.pdb
+bin\Debug\MySql.Data.dll
+bin\Debug\MySql.Data.pdb
+bin\Debug\Netcode.Common.dll
+bin\Debug\Netcode.Common.pdb

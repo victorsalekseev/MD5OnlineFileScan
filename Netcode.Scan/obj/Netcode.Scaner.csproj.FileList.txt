@@ -1,0 +1,2 @@
+obj\Release\Tes.exe
+obj\Release\Tes.pdb
