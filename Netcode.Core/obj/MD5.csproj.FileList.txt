@@ -1,8 +1,0 @@
-bin\Debug\MD5.pdb
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\MD5.pdb
-bin\Debug\MD5.dll
-obj\Debug\MD5.dll
-bin\Release\MD5.dll
-obj\Release\ResolveAssemblyReference.cache
-obj\Release\MD5.dll

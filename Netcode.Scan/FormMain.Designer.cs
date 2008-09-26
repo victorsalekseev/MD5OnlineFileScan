@@ -47,6 +47,8 @@
             this.Время = new System.Windows.Forms.ColumnHeader();
             this.Действие = new System.Windows.Forms.ColumnHeader();
             this.Комментарий = new System.Windows.Forms.ColumnHeader();
+            this.contextMenuStrip_trace = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ОчиститьtoolStripMenuItem_trace = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripaction = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonStart = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPause = new System.Windows.Forms.ToolStripButton();
@@ -66,9 +68,11 @@
             this.contextMenuStrip_journal = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.информацияОФайлеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сгенерироватьСигнатуруToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.принудительноДобавитьВБДToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очиститьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPageStatus = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.numericUpDownMax = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownMin = new System.Windows.Forms.NumericUpDown();
@@ -103,11 +107,10 @@
             this.openFileDialogSign = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogSign = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogAddSign = new System.Windows.Forms.OpenFileDialog();
-            this.contextMenuStrip_trace = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ОчиститьtoolStripMenuItem_trace = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.contextMenuStrip_trace.SuspendLayout();
             this.toolStripaction.SuspendLayout();
             this.panell.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -125,7 +128,6 @@
             this.tabPageUpdate.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBoxUpd.SuspendLayout();
-            this.contextMenuStrip_trace.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList
@@ -219,6 +221,7 @@
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.оПрограммеToolStripMenuItem.Text = "Помощь";
+            this.оПрограммеToolStripMenuItem.Visible = false;
             // 
             // оПрограммеToolStripMenuItem1
             // 
@@ -272,6 +275,19 @@
             // 
             this.Комментарий.Text = "Комментарий";
             this.Комментарий.Width = 394;
+            // 
+            // contextMenuStrip_trace
+            // 
+            this.contextMenuStrip_trace.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ОчиститьtoolStripMenuItem_trace});
+            this.contextMenuStrip_trace.Name = "contextMenuStrip_journal";
+            this.contextMenuStrip_trace.Size = new System.Drawing.Size(135, 26);
+            // 
+            // ОчиститьtoolStripMenuItem_trace
+            // 
+            this.ОчиститьtoolStripMenuItem_trace.Name = "ОчиститьtoolStripMenuItem_trace";
+            this.ОчиститьtoolStripMenuItem_trace.Size = new System.Drawing.Size(134, 22);
+            this.ОчиститьtoolStripMenuItem_trace.Text = "Очистить";
             // 
             // toolStripaction
             // 
@@ -327,6 +343,7 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(359, 22);
             this.toolStripLabel1.Text = "Все файлы, попадающие под выбранный шаблон, отображены ниже";
+            this.toolStripLabel1.Visible = false;
             // 
             // panell
             // 
@@ -423,38 +440,46 @@
             this.contextMenuStrip_journal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.информацияОФайлеToolStripMenuItem,
             this.сгенерироватьСигнатуруToolStripMenuItem,
+            this.принудительноДобавитьВБДToolStripMenuItem,
             this.удалитьФайлToolStripMenuItem,
             this.очиститьToolStripMenuItem});
             this.contextMenuStrip_journal.Name = "contextMenuStrip_journal";
-            this.contextMenuStrip_journal.Size = new System.Drawing.Size(219, 92);
+            this.contextMenuStrip_journal.Size = new System.Drawing.Size(283, 114);
             // 
             // информацияОФайлеToolStripMenuItem
             // 
             this.информацияОФайлеToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.информацияОФайлеToolStripMenuItem.Name = "информацияОФайлеToolStripMenuItem";
-            this.информацияОФайлеToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.информацияОФайлеToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
             this.информацияОФайлеToolStripMenuItem.Text = "Информация о файле";
             // 
             // сгенерироватьСигнатуруToolStripMenuItem
             // 
             this.сгенерироватьСигнатуруToolStripMenuItem.Name = "сгенерироватьСигнатуруToolStripMenuItem";
-            this.сгенерироватьСигнатуруToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.сгенерироватьСигнатуруToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
             this.сгенерироватьСигнатуруToolStripMenuItem.Text = "Сгенерировать сигнатуру";
+            // 
+            // принудительноДобавитьВБДToolStripMenuItem
+            // 
+            this.принудительноДобавитьВБДToolStripMenuItem.Name = "принудительноДобавитьВБДToolStripMenuItem";
+            this.принудительноДобавитьВБДToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.принудительноДобавитьВБДToolStripMenuItem.Text = "Принудительно добавить в онлайн БД";
             // 
             // удалитьФайлToolStripMenuItem
             // 
             this.удалитьФайлToolStripMenuItem.Name = "удалитьФайлToolStripMenuItem";
-            this.удалитьФайлToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.удалитьФайлToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
             this.удалитьФайлToolStripMenuItem.Text = "Удалить файл";
             // 
             // очиститьToolStripMenuItem
             // 
             this.очиститьToolStripMenuItem.Name = "очиститьToolStripMenuItem";
-            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
             this.очиститьToolStripMenuItem.Text = "Очистить";
             // 
             // tabPageStatus
             // 
+            this.tabPageStatus.Controls.Add(this.label10);
             this.tabPageStatus.Controls.Add(this.groupBox2);
             this.tabPageStatus.Controls.Add(this.groupBox1);
             this.tabPageStatus.Location = new System.Drawing.Point(4, 22);
@@ -464,6 +489,16 @@
             this.tabPageStatus.TabIndex = 2;
             this.tabPageStatus.Text = "Настройки";
             this.tabPageStatus.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(0, 184);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(292, 26);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Файлы удаляются моментально, без предупреждений.\r\nДобавление сигнатуры происходит" +
+                " с автосохранением.";
             // 
             // groupBox2
             // 
@@ -475,7 +510,7 @@
             this.groupBox2.Controls.Add(this.label_max_size);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(332, 111);
+            this.groupBox2.Size = new System.Drawing.Size(332, 67);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Условия";
@@ -536,7 +571,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.checkedListBox_true);
-            this.groupBox1.Location = new System.Drawing.Point(3, 120);
+            this.groupBox1.Location = new System.Drawing.Point(3, 76);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(332, 105);
             this.groupBox1.TabIndex = 11;
@@ -571,7 +606,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 13);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Если сигнатура совпала";
+            this.label4.Text = "Если сигнатура найдена";
             // 
             // checkedListBox_true
             // 
@@ -790,19 +825,6 @@
             // 
             this.openFileDialogAddSign.Title = "Выберите файл для расчета и добавления сигнатуры";
             // 
-            // contextMenuStrip_trace
-            // 
-            this.contextMenuStrip_trace.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ОчиститьtoolStripMenuItem_trace});
-            this.contextMenuStrip_trace.Name = "contextMenuStrip_journal";
-            this.contextMenuStrip_trace.Size = new System.Drawing.Size(153, 48);
-            // 
-            // ОчиститьtoolStripMenuItem_trace
-            // 
-            this.ОчиститьtoolStripMenuItem_trace.Name = "ОчиститьtoolStripMenuItem_trace";
-            this.ОчиститьtoolStripMenuItem_trace.Size = new System.Drawing.Size(152, 22);
-            this.ОчиститьtoolStripMenuItem_trace.Text = "Очистить";
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -813,6 +835,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Name = "FormMain";
             this.Text = "Сканер";
@@ -822,6 +845,7 @@
             this.menuStrip.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.contextMenuStrip_trace.ResumeLayout(false);
             this.toolStripaction.ResumeLayout(false);
             this.toolStripaction.PerformLayout();
             this.panell.ResumeLayout(false);
@@ -830,6 +854,7 @@
             this.tabPageFirst.ResumeLayout(false);
             this.contextMenuStrip_journal.ResumeLayout(false);
             this.tabPageStatus.ResumeLayout(false);
+            this.tabPageStatus.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMax)).EndInit();
@@ -847,7 +872,6 @@
             this.groupBox3.PerformLayout();
             this.groupBoxUpd.ResumeLayout(false);
             this.groupBoxUpd.PerformLayout();
-            this.contextMenuStrip_trace.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -930,6 +954,8 @@
         private System.Windows.Forms.ToolStripMenuItem очиститьToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip_trace;
         private System.Windows.Forms.ToolStripMenuItem ОчиститьtoolStripMenuItem_trace;
+        private System.Windows.Forms.ToolStripMenuItem принудительноДобавитьВБДToolStripMenuItem;
+        private System.Windows.Forms.Label label10;
     }
 }
 

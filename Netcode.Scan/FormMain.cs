@@ -15,6 +15,7 @@ using Netcode.Controls;
 using Netcode.Common;
 using Netcode.Common.Search;
 using MySql.Data.MySqlClient;
+using Netcode.Preferences;
 
 namespace Netcode.Scan
 {
@@ -34,8 +35,8 @@ namespace Netcode.Scan
         ExHashTable eht = new ExHashTable();
         Netcode.Core.Core md = new Netcode.Core.Core();
 
-        MySql.Data.MySqlClient.MyConnect my = new MyConnect("127.0.0.1", "root", "adminadmin");
-        string db_hash = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "база.txt");
+        MySql.Data.MySqlClient.MyConnect my = new MyConnect(DB.host, DB.user, DB.password);
+        string db_hash = LocalHash.db_hash;
         long count_files = 0;
 
         public FormMain()
@@ -83,6 +84,11 @@ namespace Netcode.Scan
             очиститьToolStripMenuItem.Click += new EventHandler(очиститьToolStripMenuItem_Click);
             ОчиститьtoolStripMenuItem_trace.Click += new EventHandler(ОчиститьtoolStripMenuItem_trace_Click);
             listView_journal.DoubleClick += new EventHandler(информацияОФайлеToolStripMenuItem_Click);
+            принудительноДобавитьВБДToolStripMenuItem.Click += new EventHandler(принудительноДобавитьВБДToolStripMenuItem_Click);
+            if (!DB.use_db)
+            {
+                принудительноДобавитьВБДToolStripMenuItem.Visible = false;
+            }
 
             contextMenuStrip_journal.Opened += new EventHandler(contextMenuStrip_journal_Opened);
             contextMenuStrip_trace.Opened += new EventHandler(contextMenuStrip_trace_Opened);
@@ -132,9 +138,17 @@ namespace Netcode.Scan
             string md5sum = md.Analysing(inByte);
             if (eht.AddNewHtSign(md5sum, true))
             {
+                AddFileInfoToOnlineDB(path, md5sum);
+            }
+        }
+
+        private void AddFileInfoToOnlineDB(string path, string md5sum)
+        {
+            if (DB.use_db)
+            {
                 //Анализируем файл и добавляем в общую базу
                 Hashtable ht_fi = new ExFileInfo().LoadFInfo(md5sum, path, false, DateTime.Now);
-                my.Insert(ht_fi, "aver", "fileinfo");
+                my.Insert(ht_fi, DB.db_name, DB.tbl_fileinfo);
             }
         }
 
@@ -237,18 +251,18 @@ namespace Netcode.Scan
             {
                 if ((bool)ms.get_ch_box_property(checkedListBox_true, 0, "GetItemChecked"))
                 {
-                    ms.write_lview_ex_message(nm.Name, nm.FullName, "Найден в базе", md5sum, listView_journal, Color.White, 5);
+                    ms.write_lview_ex_message(nm.Name, nm.FullName, "Найден в локальной базе", md5sum, listView_journal, Color.White, 5);
                 }
                 if ((bool)ms.get_ch_box_property(checkedListBox_true, 1, "GetItemChecked"))
                 {
                     try
                     {
                         File.Delete(nm.FullName);
-                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Удален (найден в базе)", md5sum, listView_journal, Color.Red, 4);
+                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Удален (найден в локальной базе)", md5sum, listView_journal, Color.Red, 4);
                     }
                     catch (Exception ex)
                     {
-                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Ошибка удаления (найден в базе) -- " + ex.Message, md5sum, listView_journal, Color.Tomato, 4);
+                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Ошибка удаления (найден в локальной базе) -- " + ex.Message, md5sum, listView_journal, Color.Tomato, 4);
                     }
                 }
             }
@@ -257,7 +271,7 @@ namespace Netcode.Scan
             {
                 if ((bool)ms.get_ch_box_property(checkedListBox_false, 0, "GetItemChecked"))
                 {
-                    ms.write_lview_ex_message(nm.Name, nm.FullName, "Не найден в базе", md5sum, listView_journal, Color.Yellow, 5);
+                    ms.write_lview_ex_message(nm.Name, nm.FullName, "Не найден в локальной базе", md5sum, listView_journal, Color.Yellow, 5);
                 }
                 if ((bool)ms.get_ch_box_property(checkedListBox_false, 1, "GetItemChecked"))
                 {
@@ -265,11 +279,11 @@ namespace Netcode.Scan
                     {
                         AddNewSignFromBytes(srch.ReadFile(nm.FullName), nm.FullName);
                         SaveNewSigns();
-                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Добавлен в сигнатуры (не найден в базе)", md5sum, listView_journal, Color.YellowGreen, 0);
+                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Добавлен в сигнатуры (не найден в локальной базе)", md5sum, listView_journal, Color.YellowGreen, 0);
                     }
                     catch (Exception ex)
                     {
-                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Ошибка добавления в сигнатуры (не найден в базе) -- " + ex.Message, md5sum, listView_journal, Color.Tomato, 4);
+                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Ошибка добавления в сигнатуры (не найден в локальной базе) -- " + ex.Message, md5sum, listView_journal, Color.Tomato, 4);
                     }
                 }
                 if ((bool)ms.get_ch_box_property(checkedListBox_false, 2, "GetItemChecked") && !sign_answ)
@@ -277,11 +291,11 @@ namespace Netcode.Scan
                     try
                     {
                         File.Delete(nm.FullName);
-                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Удален (не найден в базе)", md5sum, listView_journal, Color.Red, 4);
+                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Удален (не найден в локальной базе)", md5sum, listView_journal, Color.Red, 4);
                     }
                     catch (Exception ex)
                     {
-                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Ошибка удаления (не найден в базе) -- " + ex.Message, md5sum, listView_journal, Color.Tomato, 4);
+                        ms.write_lview_ex_message(nm.Name, nm.FullName, "Ошибка удаления (не найден в локальной базе) -- " + ex.Message, md5sum, listView_journal, Color.Tomato, 4);
                     }
                 }
             }
@@ -354,6 +368,7 @@ namespace Netcode.Scan
 
         private void ScanPause()
         {
+            //Не используется.
             ms.write_lview_message("Сообщение", "Сканирование приостановлено", Color.GhostWhite, 2, listView_trace);
             //toolStripButtonStart.Checked = false;
             //toolStripButtonStart.Enabled = true;
@@ -378,7 +393,6 @@ namespace Netcode.Scan
                 end = "остановлено пользователем";
             }
 
-            //button_add_sign_stop.Enabled = false;
             switch (st)
             {
                 case ScanningType.AddNewSigns:
@@ -422,19 +436,27 @@ namespace Netcode.Scan
 
         delegate void FindFileDelegate(ScanningType nm);
         FindFileDelegate calcPi;
+
+        /// <summary>
+        /// Начтать поиск
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolStripButtonStart_Click(object sender, EventArgs e)
         {
             calcPi = new FindFileDelegate(ScanStart);
             calcPi.BeginInvoke(ScanningType.CheckSigns, null, null);
-            //Application.DoEvents();
-            //ScanStart(ScanningType.CheckSigns);
         }
 
+        /// <summary>
+        /// НАчать добавление новых сигнатур
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void button_begin_scan_add_sign_Click(object sender, EventArgs e)
         {
             calcPi = new FindFileDelegate(ScanStart);
             calcPi.BeginInvoke(ScanningType.AddNewSigns, null, null);
-            //ScanStart(ScanningType.AddNewSigns);
         }
 
         ///////////////////////////////////////////////////////////////////////
@@ -465,6 +487,7 @@ namespace Netcode.Scan
             if (listView_journal.SelectedItems == null || listView_journal.SelectedItems.Count < 1)
             {
                 информацияОФайлеToolStripMenuItem.Enabled = false;
+                принудительноДобавитьВБДToolStripMenuItem.Enabled = false;
                 сгенерироватьСигнатуруToolStripMenuItem.Enabled = false;
                 удалитьФайлToolStripMenuItem.Enabled = false;
                 if (listView_journal.Items == null || listView_journal.Items.Count < 1)
@@ -482,6 +505,7 @@ namespace Netcode.Scan
                 сгенерироватьСигнатуруToolStripMenuItem.Enabled = true;
                 очиститьToolStripMenuItem.Enabled = true;
                 удалитьФайлToolStripMenuItem.Enabled = true;
+                принудительноДобавитьВБДToolStripMenuItem.Enabled = true;
             }
         }
 
@@ -556,7 +580,7 @@ namespace Netcode.Scan
             string[] prop = new string[2];
             if (listView_journal.SelectedItems.Count > 0)
             {
-                prop = (string[])listView_journal.SelectedItems[0].Tag;
+                prop = (string[])listView_journal.SelectedItems[0].Tag;//0 = md5, 1 = path
                 try
                 {
                     AddNewSignFromBytes(srch.ReadFile(prop[1]), prop[1]);
@@ -564,7 +588,25 @@ namespace Netcode.Scan
                 }
                 catch (Exception ex)
                 {
-                    ms.write_lview_message("Не добавлен", "Ошибка добавления в сигнатуры (не найден в базе) -- " + ex.Message, Color.Red, 4, listView_trace);
+                    ms.write_lview_message("Не добавлен", "Ошибка добавления в сигнатуры (не найден в локальной базе) -- " + ex.Message, Color.Red, 4, listView_trace);
+                }
+            }
+        }
+
+        void принудительноДобавитьВБДToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string[] prop = new string[2];
+            if (listView_journal.SelectedItems.Count > 0)
+            {
+                prop = (string[])listView_journal.SelectedItems[0].Tag;//0 = md5, 1 = path
+                try
+                {
+                    AddFileInfoToOnlineDB(prop[1], prop[0]);
+                    //ms.write_lview_message("Добавлен", "Файл добавлен в онлайн БД", Color.White, 5, listView_trace);
+                }
+                catch (Exception ex)
+                {
+                    ms.write_lview_message("Не добавлен", "Ошибка добавления в онлайн БД -- " + ex.Message, Color.Red, 4, listView_trace);
                 }
             }
         }

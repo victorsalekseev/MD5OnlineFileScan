@@ -7,9 +7,9 @@ namespace MySql.Data.MySqlClient
 {
     public class MyConnect
     {
-        string _server = "mysql21.1gb.ru";
-        string _user_id = "1gb_rootkit";
-        string _password = "a6bc7014";
+        string _server = string.Empty;
+        string _user_id = string.Empty;
+        string _password = string.Empty;
         MySqlConnection conn;
 
         public delegate void OnMakeError(string Error);

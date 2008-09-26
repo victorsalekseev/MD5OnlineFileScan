@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using Netcode.Preferences;
 
 namespace Netcode.Scan
 {
@@ -23,6 +24,7 @@ namespace Netcode.Scan
             
             InitializeComponent();
             toolStripButtonGo.Click += new EventHandler(toolStripButtonGo_Click);
+            toolStripTextBoxSign.KeyDown += new KeyEventHandler(toolStripTextBoxSign_KeyDown);
             toolStripTextBoxSign.Text = tag[0];
             if (!File.Exists(tag[1]))
             {
@@ -39,9 +41,20 @@ namespace Netcode.Scan
             }
         }
 
+        void toolStripTextBoxSign_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(toolStripTextBoxSign.Text))
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    toolStripButtonGo_Click(this, null);
+                }
+            }
+        }
+
         void toolStripButtonGo_Click(object sender, EventArgs e)
         {
-            webBrowserGo.Navigate("http://127.0.0.1/?" + toolStripTextBoxSign.Text);
+            webBrowserGo.Navigate(OnlineServices.server_url_hash_details + toolStripTextBoxSign.Text + "&rand=" + new Random(123).Next(1, 10000).ToString());
         }
     }
 

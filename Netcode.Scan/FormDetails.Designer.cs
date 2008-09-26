@@ -162,6 +162,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormDetails";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Свойства файла";
             this.tabControlDt.ResumeLayout(false);
