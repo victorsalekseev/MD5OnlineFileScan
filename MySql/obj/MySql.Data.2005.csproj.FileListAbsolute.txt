@@ -5,3 +5,17 @@ C:\Documents and Settings\Admin\Рабочий стол\Сканер файло�
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\MySql\obj\Debug\MySql.Data.2005.csproj.GenerateResource.Cache
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\MySql\obj\Debug\MySql.Data.dll
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\MySql\obj\Debug\MySql.Data.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\MySql\bin\Release\MySql.Data.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\MySql\bin\Release\MySql.Data.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\MySql\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\MySql\obj\Debug\MySql.Data.MySqlClient.Source.Resources.resources
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\MySql\obj\Debug\MySql.Data.2005.csproj.GenerateResource.Cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\MySql\obj\Debug\MySql.Data.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\MySql\obj\Debug\MySql.Data.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\MySql\bin\Release\MySql.Data.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\MySql\bin\Release\MySql.Data.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\MySql\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\MySql\obj\Debug\MySql.Data.MySqlClient.Source.Resources.resources
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\MySql\obj\Debug\MySql.Data.2005.csproj.GenerateResource.Cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\MySql\obj\Debug\MySql.Data.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\MySql\obj\Debug\MySql.Data.pdb

@@ -85,15 +85,51 @@ namespace Netcode.Scan
             ОчиститьtoolStripMenuItem_trace.Click += new EventHandler(ОчиститьtoolStripMenuItem_trace_Click);
             listView_journal.DoubleClick += new EventHandler(информацияОФайлеToolStripMenuItem_Click);
             принудительноДобавитьВБДToolStripMenuItem.Click += new EventHandler(принудительноДобавитьВБДToolStripMenuItem_Click);
+            импортХешзначенийИзФайлаToolStripMenuItem.Click += new EventHandler(импортХешзначенийИзФайлаToolStripMenuItem_Click);
             if (!DB.use_db)
             {
                 принудительноДобавитьВБДToolStripMenuItem.Visible = false;
+                button_begin_scan_add_sign.Width = 258;
+                импортХешзначенийИзФайлаToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                checkBox_accept_file.Enabled = true;
+                checkBox_accept_file.Visible = true;
+                импортХешзначенийИзФайлаToolStripMenuItem.Enabled = false;
             }
 
             contextMenuStrip_journal.Opened += new EventHandler(contextMenuStrip_journal_Opened);
             contextMenuStrip_trace.Opened += new EventHandler(contextMenuStrip_trace_Opened);
 
             my.MakeError += new MyConnect.OnMakeError(my_MakeError);
+        }
+
+        void импортХешзначенийИзФайлаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog_hl.ShowDialog() == DialogResult.OK)
+            {
+                this.tabControl.Enabled = false;
+                this.folderTreeExploer.Enabled = false;
+                this.toolStripaction.Enabled = false;
+                this.импортХешзначенийИзФайлаToolStripMenuItem.Enabled = false;
+                using (StreamReader sr = new StreamReader(openFileDialog_hl.FileName, Encoding.UTF8))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        eht.AddNewHtSign(sr.ReadLine(), true);
+                        toolStripStatusLabelScanCnt.Text = eht.CountNewHt.ToString();
+                        toolStripStatusLabelScanFile.Text = "Локальное добавление";
+                        Application.DoEvents();
+                    }
+                    toolStripStatusLabelScanFile.Text = "(idle)";
+                    ms.write_lview_message("Сообщение", "Добавление сигнатур закончено", Color.GhostWhite, 3, listView_trace);
+                }
+                this.tabControl.Enabled = true;
+                this.folderTreeExploer.Enabled = true;
+                this.toolStripaction.Enabled = true;
+                this.импортХешзначенийИзФайлаToolStripMenuItem.Enabled = true;
+            }
         }
 
         private void LoadBaseToExHT()
@@ -147,7 +183,7 @@ namespace Netcode.Scan
             if (DB.use_db)
             {
                 //Анализируем файл и добавляем в общую базу
-                Hashtable ht_fi = new ExFileInfo().LoadFInfo(md5sum, path, false, DateTime.Now);
+                Hashtable ht_fi = new ExFileInfo().LoadFInfo(md5sum, path, checkBox_accept_file.Checked, DateTime.Now);
                 my.Insert(ht_fi, DB.db_name, DB.tbl_fileinfo);
             }
         }

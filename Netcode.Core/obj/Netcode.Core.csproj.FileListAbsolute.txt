@@ -3,3 +3,13 @@ C:\Documents and Settings\Admin\Рабочий стол\Сканер файло�
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Core\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Core\obj\Debug\Netcode.Core.dll
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Core\obj\Debug\Netcode.Core.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Core\bin\Debug\Netcode.Core.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Core\bin\Debug\Netcode.Core.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Core\obj\Debug\Netcode.Core.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Core\obj\Debug\Netcode.Core.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Core\bin\Debug\Netcode.Core.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Core\bin\Debug\Netcode.Core.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Core\obj\Debug\Netcode.Core.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Core\obj\Debug\Netcode.Core.pdb

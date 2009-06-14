@@ -22,6 +22,6 @@ namespace Netcode.Preferences
 
     public class OnlineServices
     {
-        public static string server_url_hash_details = "http://info.1io.ru/h.php?hash=";
+        public static string server_url_hash_details = "http://scan.rootkits.ru/h.php?id=1&text=";
     }
 }

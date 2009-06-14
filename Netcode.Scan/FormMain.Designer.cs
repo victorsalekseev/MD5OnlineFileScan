@@ -91,6 +91,7 @@
             this.textBox_PnewSign = new System.Windows.Forms.TextBox();
             this.button_ch0ose = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBox_accept_file = new System.Windows.Forms.CheckBox();
             this.button_add_sign_stop = new System.Windows.Forms.Button();
             this.button_begin_scan_add_sign = new System.Windows.Forms.Button();
             this.label_hlp_addsign = new System.Windows.Forms.Label();
@@ -107,6 +108,8 @@
             this.openFileDialogSign = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogSign = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogAddSign = new System.Windows.Forms.OpenFileDialog();
+            this.импортХешзначенийИзФайлаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog_hl = new System.Windows.Forms.OpenFileDialog();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -159,7 +162,7 @@
             // toolStripStatusLabelLc
             // 
             this.toolStripStatusLabelLc.Name = "toolStripStatusLabelLc";
-            this.toolStripStatusLabelLc.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabelLc.Size = new System.Drawing.Size(41, 17);
             this.toolStripStatusLabelLc.Text = "Всего:";
             // 
             // toolStripStatusLabelScanCnt
@@ -177,13 +180,13 @@
             // toolStripStatusLabelScanl
             // 
             this.toolStripStatusLabelScanl.Name = "toolStripStatusLabelScanl";
-            this.toolStripStatusLabelScanl.Size = new System.Drawing.Size(80, 17);
+            this.toolStripStatusLabelScanl.Size = new System.Drawing.Size(87, 17);
             this.toolStripStatusLabelScanl.Text = "Сканирование";
             // 
             // toolStripStatusLabelScanFile
             // 
             this.toolStripStatusLabelScanFile.Name = "toolStripStatusLabelScanFile";
-            this.toolStripStatusLabelScanFile.Size = new System.Drawing.Size(31, 17);
+            this.toolStripStatusLabelScanFile.Size = new System.Drawing.Size(34, 17);
             this.toolStripStatusLabelScanFile.Text = "(idle)";
             // 
             // menuStrip
@@ -201,16 +204,17 @@
             // действияToolStripMenuItem
             // 
             this.действияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.импортХешзначенийИзФайлаToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.действияToolStripMenuItem.Name = "действияToolStripMenuItem";
-            this.действияToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.действияToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.действияToolStripMenuItem.Text = "Действия";
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Image = global::Netcode.Scan.Properties.Resources.exit;
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -219,7 +223,7 @@
             this.оПрограммеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.оПрограммеToolStripMenuItem1});
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.оПрограммеToolStripMenuItem.Text = "Помощь";
             this.оПрограммеToolStripMenuItem.Visible = false;
             // 
@@ -281,12 +285,12 @@
             this.contextMenuStrip_trace.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ОчиститьtoolStripMenuItem_trace});
             this.contextMenuStrip_trace.Name = "contextMenuStrip_journal";
-            this.contextMenuStrip_trace.Size = new System.Drawing.Size(135, 26);
+            this.contextMenuStrip_trace.Size = new System.Drawing.Size(127, 26);
             // 
             // ОчиститьtoolStripMenuItem_trace
             // 
             this.ОчиститьtoolStripMenuItem_trace.Name = "ОчиститьtoolStripMenuItem_trace";
-            this.ОчиститьtoolStripMenuItem_trace.Size = new System.Drawing.Size(134, 22);
+            this.ОчиститьtoolStripMenuItem_trace.Size = new System.Drawing.Size(126, 22);
             this.ОчиститьtoolStripMenuItem_trace.Text = "Очистить";
             // 
             // toolStripaction
@@ -341,7 +345,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(359, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(393, 22);
             this.toolStripLabel1.Text = "Все файлы, попадающие под выбранный шаблон, отображены ниже";
             this.toolStripLabel1.Visible = false;
             // 
@@ -444,37 +448,37 @@
             this.удалитьФайлToolStripMenuItem,
             this.очиститьToolStripMenuItem});
             this.contextMenuStrip_journal.Name = "contextMenuStrip_journal";
-            this.contextMenuStrip_journal.Size = new System.Drawing.Size(283, 114);
+            this.contextMenuStrip_journal.Size = new System.Drawing.Size(286, 114);
             // 
             // информацияОФайлеToolStripMenuItem
             // 
             this.информацияОФайлеToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.информацияОФайлеToolStripMenuItem.Name = "информацияОФайлеToolStripMenuItem";
-            this.информацияОФайлеToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.информацияОФайлеToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.информацияОФайлеToolStripMenuItem.Text = "Информация о файле";
             // 
             // сгенерироватьСигнатуруToolStripMenuItem
             // 
             this.сгенерироватьСигнатуруToolStripMenuItem.Name = "сгенерироватьСигнатуруToolStripMenuItem";
-            this.сгенерироватьСигнатуруToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.сгенерироватьСигнатуруToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.сгенерироватьСигнатуруToolStripMenuItem.Text = "Сгенерировать сигнатуру";
             // 
             // принудительноДобавитьВБДToolStripMenuItem
             // 
             this.принудительноДобавитьВБДToolStripMenuItem.Name = "принудительноДобавитьВБДToolStripMenuItem";
-            this.принудительноДобавитьВБДToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.принудительноДобавитьВБДToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.принудительноДобавитьВБДToolStripMenuItem.Text = "Принудительно добавить в онлайн БД";
             // 
             // удалитьФайлToolStripMenuItem
             // 
             this.удалитьФайлToolStripMenuItem.Name = "удалитьФайлToolStripMenuItem";
-            this.удалитьФайлToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.удалитьФайлToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.удалитьФайлToolStripMenuItem.Text = "Удалить файл";
             // 
             // очиститьToolStripMenuItem
             // 
             this.очиститьToolStripMenuItem.Name = "очиститьToolStripMenuItem";
-            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.очиститьToolStripMenuItem.Text = "Очистить";
             // 
             // tabPageStatus
@@ -660,7 +664,7 @@
             this.textBox_PnewSign.Location = new System.Drawing.Point(6, 45);
             this.textBox_PnewSign.Name = "textBox_PnewSign";
             this.textBox_PnewSign.Size = new System.Drawing.Size(258, 20);
-            this.textBox_PnewSign.TabIndex = 9;
+            this.textBox_PnewSign.TabIndex = 0;
             // 
             // button_ch0ose
             // 
@@ -668,12 +672,13 @@
             this.button_ch0ose.Location = new System.Drawing.Point(270, 43);
             this.button_ch0ose.Name = "button_ch0ose";
             this.button_ch0ose.Size = new System.Drawing.Size(55, 23);
-            this.button_ch0ose.TabIndex = 8;
+            this.button_ch0ose.TabIndex = 1;
             this.button_ch0ose.Text = "Обзор";
             this.button_ch0ose.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.checkBox_accept_file);
             this.groupBox4.Controls.Add(this.button_add_sign_stop);
             this.groupBox4.Controls.Add(this.button_begin_scan_add_sign);
             this.groupBox4.Controls.Add(this.label_hlp_addsign);
@@ -684,13 +689,27 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Групповое добавление";
             // 
+            // checkBox_accept_file
+            // 
+            this.checkBox_accept_file.AutoSize = true;
+            this.checkBox_accept_file.Checked = true;
+            this.checkBox_accept_file.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_accept_file.Enabled = false;
+            this.checkBox_accept_file.Location = new System.Drawing.Point(188, 62);
+            this.checkBox_accept_file.Name = "checkBox_accept_file";
+            this.checkBox_accept_file.Size = new System.Drawing.Size(76, 17);
+            this.checkBox_accept_file.TabIndex = 1;
+            this.checkBox_accept_file.Text = "Доверять";
+            this.checkBox_accept_file.UseVisualStyleBackColor = true;
+            this.checkBox_accept_file.Visible = false;
+            // 
             // button_add_sign_stop
             // 
             this.button_add_sign_stop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_add_sign_stop.Location = new System.Drawing.Point(270, 58);
             this.button_add_sign_stop.Name = "button_add_sign_stop";
             this.button_add_sign_stop.Size = new System.Drawing.Size(55, 23);
-            this.button_add_sign_stop.TabIndex = 7;
+            this.button_add_sign_stop.TabIndex = 2;
             this.button_add_sign_stop.Text = "Стоп";
             this.button_add_sign_stop.UseVisualStyleBackColor = true;
             // 
@@ -699,8 +718,8 @@
             this.button_begin_scan_add_sign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_begin_scan_add_sign.Location = new System.Drawing.Point(6, 58);
             this.button_begin_scan_add_sign.Name = "button_begin_scan_add_sign";
-            this.button_begin_scan_add_sign.Size = new System.Drawing.Size(258, 23);
-            this.button_begin_scan_add_sign.TabIndex = 6;
+            this.button_begin_scan_add_sign.Size = new System.Drawing.Size(176, 23);
+            this.button_begin_scan_add_sign.TabIndex = 0;
             this.button_begin_scan_add_sign.Text = "Просканировать и добавить";
             this.button_begin_scan_add_sign.UseVisualStyleBackColor = true;
             // 
@@ -728,7 +747,7 @@
             this.buttonSnewStDb.Location = new System.Drawing.Point(246, 193);
             this.buttonSnewStDb.Name = "buttonSnewStDb";
             this.buttonSnewStDb.Size = new System.Drawing.Size(85, 23);
-            this.buttonSnewStDb.TabIndex = 8;
+            this.buttonSnewStDb.TabIndex = 0;
             this.buttonSnewStDb.Text = "Сохранить";
             this.buttonSnewStDb.UseVisualStyleBackColor = true;
             // 
@@ -824,6 +843,18 @@
             // openFileDialogAddSign
             // 
             this.openFileDialogAddSign.Title = "Выберите файл для расчета и добавления сигнатуры";
+            // 
+            // импортХешзначенийИзФайлаToolStripMenuItem
+            // 
+            this.импортХешзначенийИзФайлаToolStripMenuItem.Image = global::Netcode.Scan.Properties.Resources.border_remove;
+            this.импортХешзначенийИзФайлаToolStripMenuItem.Name = "импортХешзначенийИзФайлаToolStripMenuItem";
+            this.импортХешзначенийИзФайлаToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.импортХешзначенийИзФайлаToolStripMenuItem.Text = "Импорт хеш-значений из файла";
+            // 
+            // openFileDialog_hl
+            // 
+            this.openFileDialog_hl.Filter = "All files|*.*";
+            this.openFileDialog_hl.Title = "Выберите файл с хешами";
             // 
             // FormMain
             // 
@@ -956,6 +987,9 @@
         private System.Windows.Forms.ToolStripMenuItem ОчиститьtoolStripMenuItem_trace;
         private System.Windows.Forms.ToolStripMenuItem принудительноДобавитьВБДToolStripMenuItem;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox checkBox_accept_file;
+        private System.Windows.Forms.ToolStripMenuItem импортХешзначенийИзФайлаToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog_hl;
     }
 }
 

@@ -3,3 +3,13 @@ C:\Documents and Settings\Admin\Рабочий стол\Сканер файло�
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Preferences\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Preferences\obj\Debug\Netcode.Preferences.dll
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Preferences\obj\Debug\Netcode.Preferences.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Preferences\bin\Debug\Netcode.Preferences.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Preferences\bin\Debug\Netcode.Preferences.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Preferences\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Preferences\obj\Debug\Netcode.Preferences.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Preferences\obj\Debug\Netcode.Preferences.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Preferences\bin\Debug\Netcode.Preferences.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Preferences\bin\Debug\Netcode.Preferences.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Preferences\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Preferences\obj\Debug\Netcode.Preferences.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Preferences\obj\Debug\Netcode.Preferences.pdb

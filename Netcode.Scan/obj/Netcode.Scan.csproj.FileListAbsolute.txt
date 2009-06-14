@@ -15,3 +15,37 @@ C:\Documents and Settings\Admin\Рабочий стол\Сканер файло�
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Scan\obj\Debug\Netcode.Scan.csproj.GenerateResource.Cache
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Scan\obj\Debug\Netcode.Scan.exe
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Scan\obj\Debug\Netcode.Scan.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\obj\Debug\Netcode.Scan.exe
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\obj\Debug\Netcode.Scan.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\bin\Debug\Netcode.Scan.exe
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\bin\Debug\Netcode.Scan.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\bin\Debug\MySql.Data.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\bin\Debug\Netcode.Common.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\bin\Debug\Netcode.Core.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\bin\Debug\Netcode.Preferences.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\bin\Debug\Netcode.Preferences.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\bin\Debug\Netcode.Core.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\bin\Debug\Netcode.Common.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\bin\Debug\MySql.Data.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\obj\Debug\Netcode.Scan.FormDetails.resources
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\obj\Debug\Netcode.Scan.FormMain.resources
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\obj\Debug\Netcode.Scan.Properties.Resources.resources
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Scan\obj\Debug\Netcode.Scan.csproj.GenerateResource.Cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\obj\Debug\Netcode.Scan.exe
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\obj\Debug\Netcode.Scan.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\bin\Debug\Netcode.Scan.exe
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\bin\Debug\Netcode.Scan.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\bin\Debug\MySql.Data.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\bin\Debug\Netcode.Common.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\bin\Debug\Netcode.Core.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\bin\Debug\Netcode.Preferences.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\bin\Debug\Netcode.Preferences.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\bin\Debug\Netcode.Core.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\bin\Debug\Netcode.Common.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\bin\Debug\MySql.Data.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\obj\Debug\Netcode.Scan.FormDetails.resources
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\obj\Debug\Netcode.Scan.FormMain.resources
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\obj\Debug\Netcode.Scan.Properties.Resources.resources
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Scan\obj\Debug\Netcode.Scan.csproj.GenerateResource.Cache

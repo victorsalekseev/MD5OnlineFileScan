@@ -28,7 +28,7 @@ namespace Netcode.Core
         /// <param name="inByte">Массив байт</param>
         /// <returns>Хеш-сигнатура</returns>
         public string Analysing(byte[] inByte)
-        {   
+        {
             return GetMd5Hash(inByte);
         }
     }

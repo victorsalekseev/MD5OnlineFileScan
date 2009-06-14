@@ -5,3 +5,17 @@ C:\Documents and Settings\Admin\Рабочий стол\Сканер файло�
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Common\obj\Debug\Netcode.Common.csproj.GenerateResource.Cache
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Common\obj\Debug\Netcode.Common.dll
 C:\Documents and Settings\Admin\Рабочий стол\Сканер файлов v1.0\Netcode.Common\obj\Debug\Netcode.Common.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Common\bin\Debug\Netcode.Common.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Common\bin\Debug\Netcode.Common.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Common\obj\Debug\Netcode.Controls.FolderTreeExplorer.resources
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Common\obj\Debug\Netcode.Common.csproj.GenerateResource.Cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Common\obj\Debug\Netcode.Common.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.0\Netcode.Common\obj\Debug\Netcode.Common.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Common\bin\Debug\Netcode.Common.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Common\bin\Debug\Netcode.Common.pdb
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Common\obj\Debug\Netcode.Controls.FolderTreeExplorer.resources
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Common\obj\Debug\Netcode.Common.csproj.GenerateResource.Cache
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Common\obj\Debug\Netcode.Common.dll
+C:\Users\Виктор\Desktop\Сканер файлов v1.1\Netcode.Common\obj\Debug\Netcode.Common.pdb

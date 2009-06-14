@@ -31,6 +31,7 @@ namespace Netcode.Controls
 
             tV.Nodes.AddRange(PrintDrives());
             tV.ShowNodeToolTips = true;
+            tV.HideSelection = false;
         }
 
         public Hashtable SelectedFolders
