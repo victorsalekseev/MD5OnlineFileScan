@@ -1,0 +1,7 @@
+bin\Debug\Netcode.Common.dll
+bin\Debug\Netcode.Common.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Netcode.Controls.FolderTreeExplorer.resources
+obj\Debug\Netcode.Common.csproj.GenerateResource.Cache
+obj\Debug\Netcode.Common.dll
+obj\Debug\Netcode.Common.pdb

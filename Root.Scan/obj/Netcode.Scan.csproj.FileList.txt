@@ -1,0 +1,15 @@
+obj\Debug\Netcode.Scan.exe
+obj\Debug\Netcode.Scan.pdb
+bin\Debug\Netcode.Scan.exe
+bin\Debug\Netcode.Scan.pdb
+bin\Debug\Netcode.Common.dll
+bin\Debug\Netcode.Core.dll
+bin\Debug\Netcode.Preferences.dll
+bin\Debug\Netcode.Preferences.pdb
+bin\Debug\Netcode.Core.pdb
+bin\Debug\Netcode.Common.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Netcode.Scan.FormDetails.resources
+obj\Debug\Netcode.Scan.FormMain.resources
+obj\Debug\Netcode.Scan.Properties.Resources.resources
+obj\Debug\Netcode.Scan.csproj.GenerateResource.Cache

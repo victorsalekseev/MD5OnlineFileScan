@@ -1,0 +1,2 @@
+Q:\Проекты NL3\Сканер файлов v1.2\Root.Scan\obj\Debug\Root.Scan.exe
+Q:\Проекты NL3\Сканер файлов v1.2\Root.Scan\obj\Debug\Root.Scan.pdb

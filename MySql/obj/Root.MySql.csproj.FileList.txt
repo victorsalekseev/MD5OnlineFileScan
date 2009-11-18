@@ -1,0 +1,7 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Root.MySql.Data.MySqlClient.Source.Resources.resources
+obj\Debug\Root.MySql.csproj.GenerateResource.Cache
+bin\Release\Root.MySql.Data.dll
+bin\Release\Root.MySql.Data.pdb
+obj\Debug\Root.MySql.Data.dll
+obj\Debug\Root.MySql.Data.pdb

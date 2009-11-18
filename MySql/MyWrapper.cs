@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Collections;
+using MySql.Data.MySqlClient;
 
-namespace MySql.Data.MySqlClient
+namespace Root.MySql.Data.MySqlClient
 {
     public class MyConnect
     {

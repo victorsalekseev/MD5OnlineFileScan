@@ -1,14 +1,14 @@
 Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netcode.Core", "Netcode.Core\Netcode.Core.csproj", "{B9392B6F-5B5B-45E5-AB8C-1B7A541E0CD0}"
+# Visual C# Express 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Core", "Root.Core\Root.Core.csproj", "{B9392B6F-5B5B-45E5-AB8C-1B7A541E0CD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netcode.Scan", "Netcode.Scan\Netcode.Scan.csproj", "{D15B389D-344C-4FB7-8503-08D9BC35FE17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Scan", "Root.Scan\Root.Scan.csproj", "{D15B389D-344C-4FB7-8503-08D9BC35FE17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netcode.Common", "Netcode.Common\Netcode.Common.csproj", "{E6D0C833-DCAF-4808-BCC7-0F33C9432C5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Common", "Root.Common\Root.Common.csproj", "{E6D0C833-DCAF-4808-BCC7-0F33C9432C5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySql.Data.2005", "MySql\MySql.Data.2005.csproj", "{E9DF5ED1-4CBD-4226-B931-9A51610AC14D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Preferences", "Root.Preferences\Root.Preferences.csproj", "{38537D1D-4353-41C0-85C8-CBD57B96B15A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netcode.Preferences", "Netcode.Preferences\Netcode.Preferences.csproj", "{38537D1D-4353-41C0-85C8-CBD57B96B15A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.MySql", "MySql\Root.MySql.csproj", "{E9DF5ED1-4CBD-4226-B931-9A51610AC14D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +36,12 @@ Global
 		{E6D0C833-DCAF-4808-BCC7-0F33C9432C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6D0C833-DCAF-4808-BCC7-0F33C9432C5A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E6D0C833-DCAF-4808-BCC7-0F33C9432C5A}.Release|x86.ActiveCfg = Release|Any CPU
+		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Release|x86.ActiveCfg = Release|Any CPU
 		{E9DF5ED1-4CBD-4226-B931-9A51610AC14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E9DF5ED1-4CBD-4226-B931-9A51610AC14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9DF5ED1-4CBD-4226-B931-9A51610AC14D}.Debug|x86.ActiveCfg = Debug|x86
@@ -44,12 +50,6 @@ Global
 		{E9DF5ED1-4CBD-4226-B931-9A51610AC14D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E9DF5ED1-4CBD-4226-B931-9A51610AC14D}.Release|x86.ActiveCfg = Release|x86
 		{E9DF5ED1-4CBD-4226-B931-9A51610AC14D}.Release|x86.Build.0 = Release|x86
-		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38537D1D-4353-41C0-85C8-CBD57B96B15A}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

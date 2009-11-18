@@ -1,0 +1,7 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Root.Controls.FolderTreeExplorer.resources
+obj\Debug\Root.Common.csproj.GenerateResource.Cache
+bin\Debug\Root.Common.dll
+bin\Debug\Root.Common.pdb
+obj\Debug\Root.Common.dll
+obj\Debug\Root.Common.pdb

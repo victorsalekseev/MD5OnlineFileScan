@@ -1,0 +1,16 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Root.Scan.FormDetails.resources
+obj\Debug\Root.Scan.FormMain.resources
+obj\Debug\Root.Scan.Properties.Resources.resources
+obj\Debug\Root.Scan.csproj.GenerateResource.Cache
+bin\Debug\Root.Scan.exe
+bin\Debug\Root.Scan.pdb
+bin\Debug\Root.Common.dll
+bin\Debug\Root.Core.dll
+bin\Debug\Root.Preferences.dll
+bin\Debug\Root.Preferences.pdb
+bin\Debug\Root.Core.pdb
+bin\Debug\Root.Common.pdb
+obj\Debug\Root.Scan.exe
+obj\Debug\Root.Scan.pdb
+obj\Debug\Root.Scan.FormLicensing.resources
