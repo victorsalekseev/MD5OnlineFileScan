@@ -1,5 +1,0 @@
-bin\Debug\Root.Preferences.dll
-bin\Debug\Root.Preferences.pdb
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\Root.Preferences.dll
-obj\Debug\Root.Preferences.pdb
